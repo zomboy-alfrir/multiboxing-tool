@@ -8,8 +8,8 @@ Being able to quickly cycle between characters at the press of a button (instead
 
 ## Instructions
 
-  1. Download [AutoHotKey](https://autohotkey.com/download/)
-  2. Download this repository and extract it to a folder
+  1. [Download AutoHotKey](https://autohotkey.com/download/)
+  2. [Download this repository](https://github.com/zomboy-alfrir/multiboxing-tool/archive/master.zip) and extract it to a folder
   3. Edit the `toons.txt` file.
         * On each line, add the name of your EVE Online toon, followed by a `TAB` character and a number
   4. Right click on `main.ahk` and select **"Run as administrator"**
