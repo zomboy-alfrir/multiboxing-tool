@@ -17,8 +17,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ======================
 
 FileRead, ToonList, toons.txt
-StringReplace, ToonListNoR, ToonList, `r , "", All
-StringSplit, ToonListArray, ToonListNoR, `n
+StringReplace, ToonListNoR, ToonList, `r ,, All
+
+TrimmedToon = % RegExReplace(ToonListNoR,"\s*$","")
+StringSplit, ToonListArray, TrimmedToon, `n
 
 
 ; ====== Start drawing the UI
