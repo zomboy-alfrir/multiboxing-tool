@@ -11,6 +11,6 @@ Being able to quickly cycle between characters at the press of a button (instead
   1. [Download AutoHotKey](https://autohotkey.com/download/)
   2. [Download this repository](https://github.com/zomboy-alfrir/multiboxing-tool/archive/master.zip) and extract it to a folder.
   3. Edit the `toons.txt` file. On each line, add the name of your EVE Online toon, followed by a `TAB` character and a number.
-  4. Right click on `main.ahk` and select **"Run as administrator"**.
+  4. Right click on `gui.ahk` and select **"Run as administrator"**.
   5. You will now be able to switch between EVE Online characters by pressing on his/her corresponding number key.
 

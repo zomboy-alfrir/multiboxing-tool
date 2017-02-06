@@ -17,28 +17,27 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ======================
 
 FileRead, ToonList, toons.txt
-StringSplit, ToonListArray, ToonList, `n
+StringReplace, ToonListNoR, ToonList, `r , "", All
+StringSplit, ToonListArray, ToonListNoR, `n
 
 
 ; ====== Start drawing the UI
 ; ======================
 
 Gui, Add, Picture, x-0 y-0 wS_CLIPSIBLINGS , img\bg.png
-Gui, Add, Picture, x272 y529 w200 h50 gCreatedBy, img\createdby.png
+Gui, Add, Picture, x272 y529 gCreatedBy, img\createdby.png
 
-Loop 5 {
-	height := 179 + (A_Index - 1) * 58
+Loop %ToonListArray0% {
+	height := 169 + (A_Index - 1) * 28
 	toon_line = % ToonListArray%A_Index%
 	StringSplit, toon_line_parsed, toon_line, `t
 	
 	toon_name = % toon_line_parsed1
-	toon_key = % toon_line_parsed2	
+	toon_key = % toon_line_parsed2
 	
-	Gui, Add, Edit, x32 y%height% w380 h20 ReadOnly -Wrap, %toon_name%
-	Gui, Add, Edit, x440 y%height% w30 h20 ReadOnly -Wrap, %toon_key%
+	Gui, Add, Edit, x23 y%height% w300 h20 ReadOnly -Wrap, %toon_name%
+	Gui, Add, Edit, x360 y%height% w115 h20 ReadOnly -Wrap, %toon_key%
 }
-
-Gui, Add, Button, x160 y459 w190 h50 gSaveButton, Save
 
 ; ====== Show the UI
 ; ======================
@@ -49,15 +48,18 @@ Gui, Show, x649 y202 h600 w500, Zomboy's Multiboxing Tool
 ; ====== Setup the Hotkeys
 ; ======================
 
-SaveButton:	
 	
-	; Only switch if the window is already active
-	Hotkey, IfWinActive, ahk_exe exefile.exe
+; Only switch if the window is already active
+Hotkey, IfWinActive, ahk_exe exefile.exe
+
+Loop %ToonListArray0% {
+	toon_line = % ToonListArray%A_Index%
+	StringSplit, toon_line_parsed, toon_line, `t
+	key_to_press = % toon_line_parsed2
+	key_to_press = % Hparse(key_to_press)
 	
-	Loop 5 {		
-		
-		Hotkey, %A_Index%, SwitchTo%A_Index%
-	}
+	Hotkey, %key_to_press%, SwitchTo%A_Index%
+}
 
 Return
 
@@ -128,7 +130,80 @@ SwitchTo5:
 	}
 Return
 
+SwitchTo6:
+	toon_line = % ToonListArray6
+	StringSplit, toon_line_parsed, toon_line, `t
+	win_name = EVE - %toon_line_parsed1%
+	IfWinNotActive, %win_name%
+	{
+		WinActivate  %win_name%
+	}
+Return
+
+SwitchTo7:
+	toon_line = % ToonListArray7
+	StringSplit, toon_line_parsed, toon_line, `t
+	win_name = EVE - %toon_line_parsed1%
+	IfWinNotActive, %win_name%
+	{
+		WinActivate  %win_name%
+	}
+Return
+
+SwitchTo8:
+	toon_line = % ToonListArray8
+	StringSplit, toon_line_parsed, toon_line, `t
+	win_name = EVE - %toon_line_parsed1%
+	IfWinNotActive, %win_name%
+	{
+		WinActivate  %win_name%
+	}
+Return
+
+SwitchTo9:
+	toon_line = % ToonListArray9
+	StringSplit, toon_line_parsed, toon_line, `t
+	win_name = EVE - %toon_line_parsed1%
+	IfWinNotActive, %win_name%
+	{
+		WinActivate  %win_name%
+	}
+Return
+
+SwitchTo10:
+	toon_line = % ToonListArray10
+	StringSplit, toon_line_parsed, toon_line, `t
+	win_name = EVE - %toon_line_parsed1%
+	IfWinNotActive, %win_name%
+	{
+		WinActivate  %win_name%
+	}
+Return
+
+SwitchTo11:
+	toon_line = % ToonListArray11
+	StringSplit, toon_line_parsed, toon_line, `t
+	win_name = EVE - %toon_line_parsed1%
+	IfWinNotActive, %win_name%
+	{
+		WinActivate  %win_name%
+	}
+Return
+
+SwitchTo12:
+	toon_line = % ToonListArray12
+	StringSplit, toon_line_parsed, toon_line, `t
+	win_name = EVE - %toon_line_parsed1%
+	IfWinNotActive, %win_name%
+	{
+		WinActivate  %win_name%
+	}
+Return
+
+
 
 
 GuiClose:
 ExitApp
+
+#Include, vendor\HotkeyParser.ahk

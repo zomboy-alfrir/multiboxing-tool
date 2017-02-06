@@ -1,5 +1,12 @@
-Empty Character	1
-Empty Character	2
-Empty Character	3
-Empty Character	4
-Empty Character	5
+Sample Character	1
+Sample Character	2
+Sample Character	Control + 3
+Sample Character	Control + Alt + 2
+Sample Character	Numpad2
+Sample Character	Numpad3
+Sample Character	Numpad4
+Sample Character	Numpad5
+Sample Character	Numpad6
+Sample Character	Numpad7
+Sample Character	Numpad8
+Sample Character	Numpad9
