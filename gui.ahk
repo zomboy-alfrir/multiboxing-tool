@@ -50,24 +50,33 @@ Gui, Show, x649 y202 h600 w500, Zomboy's Multiboxing Tool
 ; ====== Setup the Hotkeys
 ; ======================
 
-	
-; Only switch if the window is already active
-Hotkey, IfWinActive, ahk_exe exefile.exe
-
 Loop %ToonListArray0% {
 	toon_line = % ToonListArray%A_Index%
 	StringSplit, toon_line_parsed, toon_line, `t
 	key_to_press = % toon_line_parsed2
 	key_to_press = % Hparse(key_to_press)
 	
+	win_name = EVE - %toon_line_parsed1%
+	
+	SetTitleMatchMode, 2
+	
+	Hotkey, IfWinExist, %win_name% ahk_exe exefile.exe
 	Hotkey, %key_to_press%, SwitchTo%A_Index%
 }
+
+Hotkey, IfWinActive
+Hotkey, 0, PositionEVEWindows
 
 Return
 
 ; =======================================================================
 ; End of Main subroutine
 ; =======================================================================
+
+
+
+
+
 
 ; ====== Show my EVE profile
 ; ======================
@@ -76,6 +85,19 @@ CreatedBy:
 	Run "https://gate.eveonline.com/Profile/Zomboy Alfrir"
 Return
 
+
+PositionEVEWindows:
+	SetTitleMatchMode, 2
+	WinGet, id, list, ahk_exe exefile.exe
+	Loop, %id%
+	{	
+		this_id := id%A_Index%
+		WinMove, ahk_id %this_id%,,0,0,1920,900
+	}
+Return
+
+
+
 ; ====== Labels can't be created dynamically AFAIK
 ;        So I must repeat code like a monkey.
 ;        These are the labels that get called when
@@ -83,122 +105,170 @@ Return
 ; ======================
 
 SwitchTo1:
-	toon_line = % ToonListArray1
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray1
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo2:
-	toon_line = % ToonListArray2
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray2
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo3:
-	toon_line = % ToonListArray3
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray3
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo4:
-	toon_line = % ToonListArray4
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray4
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo5:
-	toon_line = % ToonListArray5
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray5
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo6:
-	toon_line = % ToonListArray6
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray6
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo7:
-	toon_line = % ToonListArray7
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray7
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo8:
-	toon_line = % ToonListArray8
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray8
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo9:
-	toon_line = % ToonListArray9
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray9
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo10:
-	toon_line = % ToonListArray10
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray10
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo11:
-	toon_line = % ToonListArray11
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray11
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
 SwitchTo12:
-	toon_line = % ToonListArray12
-	StringSplit, toon_line_parsed, toon_line, `t
-	win_name = EVE - %toon_line_parsed1%
-	IfWinNotActive, %win_name%
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
 	{
-		WinActivate  %win_name%
+		toon_line = % ToonListArray12
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
 	}
 Return
 
