@@ -51,10 +51,13 @@ Gui, Show, x649 y202 h600 w500, Zomboy's Multiboxing Tool
 ; ======================
 
 Loop %ToonListArray0% {
+
 	toon_line = % ToonListArray%A_Index%
 	StringSplit, toon_line_parsed, toon_line, `t
 	key_to_press = % toon_line_parsed2
 	key_to_press = % Hparse(key_to_press)
+	
+	Hotkey%A_Index% = %key_to_press%
 	
 	win_name = EVE - %toon_line_parsed1%
 	
@@ -116,7 +119,11 @@ SwitchTo1:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey1%
+	}
+	Return
 
 SwitchTo2:
 	; Only switch if the window is already active
@@ -130,7 +137,11 @@ SwitchTo2:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey2%
+	}
+	Return
 
 SwitchTo3:
 	; Only switch if the window is already active
@@ -144,7 +155,11 @@ SwitchTo3:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey3%
+	}
+	Return
 
 SwitchTo4:
 	; Only switch if the window is already active
@@ -158,7 +173,11 @@ SwitchTo4:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey4%
+	}
+	Return
 
 SwitchTo5:
 	; Only switch if the window is already active
@@ -172,7 +191,11 @@ SwitchTo5:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey5%
+	}
+	Return
 
 SwitchTo6:
 	; Only switch if the window is already active
@@ -186,7 +209,11 @@ SwitchTo6:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey6%
+	}
+	Return
 
 SwitchTo7:
 	; Only switch if the window is already active
@@ -200,7 +227,11 @@ SwitchTo7:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey7%
+	}
+	Return
 
 SwitchTo8:
 	; Only switch if the window is already active
@@ -214,7 +245,11 @@ SwitchTo8:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey8%
+	}
+	Return
 
 SwitchTo9:
 	; Only switch if the window is already active
@@ -228,7 +263,11 @@ SwitchTo9:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey9%
+	}
+	Return
 
 SwitchTo10:
 	; Only switch if the window is already active
@@ -242,7 +281,11 @@ SwitchTo10:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey10%
+	}
+	Return
 
 SwitchTo11:
 	; Only switch if the window is already active
@@ -256,7 +299,11 @@ SwitchTo11:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey11%
+	}
+	Return
 
 SwitchTo12:
 	; Only switch if the window is already active
@@ -270,7 +317,29 @@ SwitchTo12:
 			WinActivate  %win_name% ahk_exe exefile.exe
 		}
 	}
-Return
+	else
+	{
+		SendInput %Hotkey12%
+	}
+	Return
+
+SwitchTo13:
+	; Only switch if the window is already active
+	IfWinActive, ahk_exe exefile.exe
+	{
+		toon_line = % ToonListArray13
+		StringSplit, toon_line_parsed, toon_line, `t
+		win_name = EVE - %toon_line_parsed1%
+		IfWinNotActive, %win_name% ahk_exe exefile.exe
+		{
+			WinActivate  %win_name% ahk_exe exefile.exe
+		}
+	}
+	else
+	{
+		SendInput %Hotkey13%
+	}
+	Return
 
 
 
