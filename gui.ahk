@@ -123,7 +123,7 @@ SwitchTo1:
 	{
 		SendInput %Hotkey1%
 	}
-	Return
+Return
 
 SwitchTo2:
 	; Only switch if the window is already active
@@ -141,7 +141,7 @@ SwitchTo2:
 	{
 		SendInput %Hotkey2%
 	}
-	Return
+Return
 
 SwitchTo3:
 	; Only switch if the window is already active
@@ -159,7 +159,7 @@ SwitchTo3:
 	{
 		SendInput %Hotkey3%
 	}
-	Return
+Return
 
 SwitchTo4:
 	; Only switch if the window is already active
@@ -177,7 +177,7 @@ SwitchTo4:
 	{
 		SendInput %Hotkey4%
 	}
-	Return
+Return
 
 SwitchTo5:
 	; Only switch if the window is already active
@@ -195,7 +195,7 @@ SwitchTo5:
 	{
 		SendInput %Hotkey5%
 	}
-	Return
+Return
 
 SwitchTo6:
 	; Only switch if the window is already active
@@ -213,7 +213,7 @@ SwitchTo6:
 	{
 		SendInput %Hotkey6%
 	}
-	Return
+Return
 
 SwitchTo7:
 	; Only switch if the window is already active
@@ -231,7 +231,7 @@ SwitchTo7:
 	{
 		SendInput %Hotkey7%
 	}
-	Return
+Return
 
 SwitchTo8:
 	; Only switch if the window is already active
@@ -249,7 +249,7 @@ SwitchTo8:
 	{
 		SendInput %Hotkey8%
 	}
-	Return
+Return
 
 SwitchTo9:
 	; Only switch if the window is already active
@@ -267,7 +267,7 @@ SwitchTo9:
 	{
 		SendInput %Hotkey9%
 	}
-	Return
+Return
 
 SwitchTo10:
 	; Only switch if the window is already active
@@ -285,7 +285,7 @@ SwitchTo10:
 	{
 		SendInput %Hotkey10%
 	}
-	Return
+Return
 
 SwitchTo11:
 	; Only switch if the window is already active
@@ -303,7 +303,7 @@ SwitchTo11:
 	{
 		SendInput %Hotkey11%
 	}
-	Return
+Return
 
 SwitchTo12:
 	; Only switch if the window is already active
@@ -321,7 +321,7 @@ SwitchTo12:
 	{
 		SendInput %Hotkey12%
 	}
-	Return
+Return
 
 SwitchTo13:
 	; Only switch if the window is already active
@@ -339,7 +339,7 @@ SwitchTo13:
 	{
 		SendInput %Hotkey13%
 	}
-	Return
+Return
 
 
 
