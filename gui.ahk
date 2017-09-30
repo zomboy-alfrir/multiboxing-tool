@@ -98,7 +98,6 @@ PositionEVEWindows:
 		this_id := id%A_Index%
 		WinMove, ahk_id %this_id%,,0,0,1904,861
 	}
-	SendInput 0
 Return
 
 
