@@ -67,10 +67,10 @@ Loop %ToonListArray0% {
 	Hotkey, %key_to_press%, SwitchTo%A_Index%
 }
 
-#IfWinActive
-~0::
-Gosub, PositionEVEWindows
-return
+;#IfWinActive
+;~0::
+;Gosub, PositionEVEWindows
+;return
 
 Return
 
