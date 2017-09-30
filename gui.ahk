@@ -30,7 +30,7 @@ Gui, Add, Picture, x-0 y-0 wS_CLIPSIBLINGS , img\bg.png
 Gui, Add, Picture, x272 y529 gCreatedBy, img\createdby.png
 
 Loop %ToonListArray0% {
-	height := 169 + (A_Index - 1) * 28
+	height := 159 + (A_Index - 1) * 28
 	toon_line = % ToonListArray%A_Index%
 	StringSplit, toon_line_parsed, toon_line, `t
 	
@@ -67,8 +67,10 @@ Loop %ToonListArray0% {
 	Hotkey, %key_to_press%, SwitchTo%A_Index%
 }
 
-Hotkey, IfWinActive
-Hotkey, 0, PositionEVEWindows
+#IfWinActive
+~0::
+Gosub, PositionEVEWindows
+return
 
 Return
 
@@ -77,15 +79,14 @@ Return
 ; =======================================================================
 
 
-
-
+	
 
 
 ; ====== Show my EVE profile
 ; ======================
 
 CreatedBy:
-	Run "https://gate.eveonline.com/Profile/Zomboy Alfrir"
+	Run "https://zkillboard.com/character/94672343/"
 Return
 
 
@@ -95,8 +96,9 @@ PositionEVEWindows:
 	Loop, %id%
 	{	
 		this_id := id%A_Index%
-		WinMove, ahk_id %this_id%,,0,0,1920,900
+		WinMove, ahk_id %this_id%,,0,0,1904,861
 	}
+	SendInput 0
 Return
 
 
