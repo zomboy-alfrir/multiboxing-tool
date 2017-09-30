@@ -13,3 +13,8 @@ Being able to quickly cycle between characters at the press of a button (instead
   3. Edit the `toons.txt` file. On each line, add the name of your EVE Online toon, followed by a `TAB` character and a number.
   4. Right click on `gui.ahk` and select **"Run as administrator"**.
   5. You will now be able to switch between EVE Online characters by pressing on his/her corresponding number key.
+
+## About hotkeys
+
+  * You can re-use the same hotkey with several characters. This is useful when you have those in the same account, since they can never be online at the same time.
+  
