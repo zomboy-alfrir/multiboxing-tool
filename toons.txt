@@ -1,12 +1,10 @@
-Sample Character	1
-Sample Character	2
-Sample Character	Control + 3
-Sample Character	Control + Alt + 2
-Sample Character	Numpad2
-Sample Character	Numpad3
-Sample Character	Numpad4
-Sample Character	Numpad5
-Sample Character	Numpad6
-Sample Character	Numpad7
-Sample Character	Numpad8
-Sample Character	Numpad9
+Name of Character	1
+Name of Character2	1
+Name of Character	2
+Name of Character	3
+Name of Character	4
+Name of Character	5
+Name of Character	6
+Name of Character	7
+Name of Character	8
+Name of Character	9
